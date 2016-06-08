@@ -1,0 +1,108 @@
+
+
+label {
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4
+}
+
+input[type="radio"]:empty {
+    margin-left: -999px;
+}
+
+
+.job {
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 19em;
+  /*margin-bottom: 25px;*/
+  height: 4.5em; 
+}
+
+input[type="radio"]:empty ~ label {
+    position: relative;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="radio"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content:'';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+input[type="radio"]:hover:not(:checked) ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    /*color: #C2C2C2;*/
+    color: #555;
+}
+
+input[type="radio"]:hover:not(:checked) ~ label {
+   color: #888;
+}
+
+input[type="radio"]:checked ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    /*color: white;*/
+    color: #e67e22;
+    background-color: rgba(11,82,142,1);
+}
+
+input[type="radio"]:checked ~ label {
+    color: #e67e22;
+}
+
+input[type="radio"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.labelforRL_Executive
+{
+    background-color: rgba(11,82,142,1);
+    /*color: #F2923F;*/
+    color: #fff
+}
+
+.labelforRL_GeneralManager
+{
+    background-color: rgb(25,92,148);
+    color: #fff
+}
+
+.labelforRL_SeniorManager
+{
+    background-color: rgba(17,96,162,1);
+    color: #fff
+}
+
+.labelforRL_JuniorManager
+{
+    background-color: rgba(27,109,179,1);
+    color: #fff
+}
+
+.labelforRL_SeniorProfessional
+{
+    background-color: rgba(37,120,189,1);
+    color: #fff
+}
+
+.labelforRL_YoungProfessional
+{
+    background-color: rgba(49,132,202,1);
+    color: #fff
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Position Chart</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- CSS -->
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/mainpage.css"> -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <!-- jQuery 2.2.0 -->
+    <script src="jQuery/jQuery-2.2.0.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="jQuery/app.min.js"></script>
+    <script type="text/javascript" src="js/DashBoard.js"></script>
+	
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/jquery.orgchart.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="DashBoard.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>J</b>D</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Job</b>Descriptor</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-right navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;Stan Smith <span class="caret"></span>  &nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="index.html"><i class="fa fa-power-off"></i>Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+               <ul class="sidebar-menu">
+                    <li class="header"></li>
+                    
+                    <li class="treeview">
+                        <a href="Organisational_Context.html">
+                            <i class="fa fa-group"></i>
+                            <span>Organisation Context</span>
+                        </a>
+
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-male"></i>
+                            <span>Role Context</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="Primary_Focus.html"><i class="fa fa-circle-o"></i> Primary Focus of the Role</a></li>
+                            <li><a href="Organisational_Level.html"><div><i class="fa fa-circle-o"></i> &nbsp;&nbsp;Organisational Level <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Competencies</div></a></li>
+                        </ul>
+                    </li>
+                    <li class="active treeview">
+                        <a href="Position_Chart.html">
+                            <i class="fa fa-sitemap"></i> <span>Position Chart</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-database"></i> <span>Accountabilities</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="Accountabilities_Policy.html"><i class="fa fa-circle-o"></i> Policy & Planning</a></li>
+                            <li><a href="Accountabilities_Operations.html"><i class="fa fa-circle-o"></i> Operations</a></li>
+                            <li><a href="Accountabilities_Leadership.html"><i class="fa fa-circle-o"></i> Leadership</a></li>
+                            <li><a href="Accountabilities_Reporting.html"><i class="fa fa-circle-o"></i> Reporting</a></li>
+                            <li><a href="Accountabilities_Communication.html"><i class="fa fa-circle-o"></i> Communication</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        </nav>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="container-fluid">
+			<div class="row col-lg-10 col-lg-offset-1 custyle">
+				<h4><b>Organisation chart</b> </h4>
+				<p>
+					In order to get a true understanding of the demands made on the role and its strategic focus and importance, it is important to understand the reporting relationship. We believe that the true picture of the role emerges when it is viewed in context of who it reports to, who reports to it and some roles at a similar level to it.
+                    The easy to navigate chart allows you to very easily add levels, edit role titles and create your own organisation charts.
+				</p>
+				<p class="text-primary"><i class="fa fa-flag" aria-hidden="true"></i> The level above is the direct manager, the lower level is "direct report" and the same level are the roles that report to the direct manager.
+				</p>
+            
+            <div class="decoration-report"></div>
+            <!-- /.content -->
+            <div id="orgChartContainer">
+                <div id="orgChart"></div>
+            </div>
+            <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+            <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+            <script type="text/javascript">
+            var defaultData = [{
+                id: 1,
+                name: 'Upper level',
+                parent: 0
+            }, {
+                id: 2,
+                name: 'Current user',
+                parent: 1
+            }, {
+                id: 3,
+                name: 'Same level',
+                parent: 1
+            }, {
+                id: 4,
+                name: 'Lower level',
+                parent: 2
+            }];
+            $(function() {
+                org_chart = $('#orgChart').orgChart({
+                    data: defaultData,
+                    showControls: true,
+                    allowEdit: true,
+                    onAddNode: function(node) {
+                        org_chart.newNode(node.data.id);
+                    },
+                    onDeleteNode: function(node) {
+                        org_chart.deleteNode(node.data.id);
+                    }
+
+                });
+            });
+            </script>
+			<div class="decoration"></div>
+			<div class="text-left">
+				
+				<a href="Organisational_Level.html"  class="btn btn-labeled btn-default" role="button">
+					<span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Previous</a>
+				<a href="Accountabilities_Policy.html" class="btn btn-labeled btn-default" id="savebutton" role="button">Save & Next
+                <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span></a>
+			</div>
+            <div class="spaceToBot"></div>	
+        </div>
+		</div>
+    </div>
+        <!-- /.content-wrapper -->
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

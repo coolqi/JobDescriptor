@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JobDescriptor</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- CSS -->
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/mainpage.css"> -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <!-- <link rel="stylesheet" href="css/chart/pie.css"> -->
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/DashBoard.css">
+    <link href="css/chart/morris.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/chart/sb-admin-2.css"> -->
+
+    <!-- AdminLTE App -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="Dashboard.html" class="logo">
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Job</b>Descriptor</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-right navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp;Stan Smith <span class="caret"></span>  &nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="index.html"><i class="fa fa-power-off"></i>Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-page">
+            <!-- Content Header (Page header) -->
+            <div class="container-fluid">
+                <div class="col-sm-12  custyle">
+                    <div>
+                        <div class="pull-left org_dtl_form">
+                            <h4><b>Welcome, Stan</b> </h4>
+                        </div>
+                        <div class="pull-right create-btn">
+                            <button class="btn btn-success" id="savebutton"  onclick="window.location.href='Organisational_Context.html'"><span class="glyphicon glyphicon-plus"></span> Create PD</button>
+                        </div>
+                        
+                       
+                        
+                    </div>
+                    <div class="decoration"></div>
+                    <!-- Table content -->
+                    <div class="col-sm-9">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b>Position Descripion</b>
+                                <!-- <div class="pull-right">
+                                    <input class="form-control search-box" type="text" id="filter" placeholder="search">
+                                </div> -->
+                                
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table id="myTable" class="table table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>No. </th>
+                                                <th>Job Title</th>
+                                                <th>Created by</th>
+                                                <th>Created date</th>
+                                                <th>Last modified by</th>
+                                                <th>Last modified date</th>
+                                                <th>Status</th>
+                                                <th class="text-center">Edit</th>
+                                                <th class="text-center">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Accountant</td>
+                                            <td>Admin</td>
+                                            <td>11/3/2016</td>
+                                            <td>Admin</td>
+                                            <td>11/3/2016</td>
+                                            <td>Completed</td>
+                                            <td class="text-center">
+                                                <button type="submit" class="btn btn-sm btn-info editRow" onclick="window.location.href='Organisational_Context.html'"><span class="glyphicon glyphicon-edit"></span>
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="submit" class="btn btn-sm btn-danger deleteRow"><span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Financial Advisor</td>
+                                            <td>Admin</td>
+                                            <td>21/3/2016</td>
+                                            <td>Admin</td>
+                                            <td>21/3/2016</td>
+                                            <td>In Progress</td>
+                                            <td class="text-center">
+                                                <button type="submit" class="btn btn-sm btn-info editRow"><span class="glyphicon glyphicon-edit"></span>
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="submit" class="btn btn-sm btn-danger deleteRow"><span class="glyphicon glyphicon-remove"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b>Status of PDs</b>
+                                
+                            </div>
+                            <div class="panel-body">
+                                <div id="pie-chart" style="height:150px"> </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <b>Number of PDs</b>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-donut-chart" style="height:160px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spaceToBot"></div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- /.control-sidebar -->
+    <!-- jQuery -->
+    <!-- jQuery 2.2.0 -->
+    <script src="jQuery/jQuery-2.2.0.min.js"></script>
+    <script src="jQuery/app.min.js"></script>
+    <script type="text/javascript" src="js/DashBoard.js"></script>
+    
+    <!--donut chart  -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart/morris.min.js"></script>
+    <script src="js/chart/raphael-min.js"></script>
+    <script src="js/chart/morris-data.js"></script>
+    
+    <!-- status -->
+    <script src="js/flot/jquery.flot.min.js"></script>
+    <script src="js/flot/jquery.flot.pie.min.js"></script>
+    <!-- <script src="js/flot/jquery.flot.resize.min.js"></script> -->
+    <script src="js/flot/status-data.js"></script>
+
+</body>
+
+</html>
